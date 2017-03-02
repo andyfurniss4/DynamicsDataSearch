@@ -1,0 +1,35 @@
+﻿<div class="container-fluid">
+    <h2>Dynamics Data Search</h2>
+
+    <form class="row padded-top col-lg-4" (ngSubmit)="onSubmit()" #searchForm="ngForm">
+        <div class="form-group">
+            <label for="entity">Entity</label>
+            <select class="form-control" id="entity" name="entity" required [(ngModel)]="model.entity">
+                <option *ngFor="let option of entityOptions" [value]="option.value">{{option.display}}</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="model.id" pattern="^[0-9a-fA-F]{8}[-]?([0-9a-fA-F]{4}[-]?){3}[0-9a-fA-F]{12}$"
+                   #id="ngModel" />
+        </div>
+
+        <div class="form-group">
+            <label for="filter">Filter</label>
+            <input type="text" class="form-control" id="filter" name="filter"                   
+                   [(ngModel)]="model.filter"
+                   #filter="ngModel" />
+        </div>
+
+        <div [hidden]="searchForm.form.valid && formValid()" class="alert alert-danger">Please specify a valid ID (guid) or filter</div>
+
+        <button type="submit" class="btn btn-success" *ngIf="!searching" [disabled]="searching || !searchForm.form.valid || !formValid()">Search...</button>
+        <div class="loader" [hidden]="!searching"></div>
+    </form>
+
+    <div class="row padded-top col-lg-12" *ngIf="entities">
+        <generic-table [records]="entities" [title]="'Result'" [excludeColumns]="['@odata.etag']" [resultsPerPage]="10"></generic-table>
+    </div>
+</div>
