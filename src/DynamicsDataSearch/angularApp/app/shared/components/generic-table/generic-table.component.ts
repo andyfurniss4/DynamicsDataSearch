@@ -48,7 +48,7 @@ export class GenericTableComponent implements OnChanges {
     rowsToPad(): number {
         let rowsToPad: number = 0;
         if (this.currentRangeMax() === this.records.length) {
-            rowsToPad = (Math.ceil(this.currentRangeMax() / 10) * 10) - this.currentRangeMax();
+            rowsToPad = (Math.ceil(this.currentRangeMax() / this.resultsPerPage) * this.resultsPerPage) - this.currentRangeMax();
             console.log(rowsToPad);
         }
         return rowsToPad;
