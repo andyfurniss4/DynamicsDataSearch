@@ -29,7 +29,7 @@
         <div class="loader" [hidden]="!searching"></div>
     </form>
 
-    <div class="row padded-top col-lg-12" *ngIf="entities">
+    <div class="row padded-top padded-bottom col-lg-12" *ngIf="entities">
         <generic-table [records]="entities" [title]="'Result'" [excludeColumns]="['@odata.etag']" [resultsPerPage]="10"></generic-table>
     </div>
 </div>
