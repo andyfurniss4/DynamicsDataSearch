@@ -28,8 +28,6 @@ export class DynamicsSearchComponent {
                 this.entities = results;
                 this.searching = false;
                 this.searchSuccessful = results !== null && results.length > 0;
-                console.log('searching: ' + this.searchSuccessful);
-                console.log('successful: ' + this.searchSuccessful);
             });
     }
 
