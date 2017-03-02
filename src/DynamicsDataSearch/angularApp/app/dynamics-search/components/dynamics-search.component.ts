@@ -8,7 +8,9 @@ import { DynamicsSearch } from '../models/dynamics-search';
     templateUrl: 'dynamics-search.component.html'
 })
 export class DynamicsSearchComponent {
-    private searching = false;
+    private searching: boolean = false;
+    private searched: boolean = false;
+    private searchSuccessful: boolean = false;;
 
     entityOptions = [
         { value: 'contacts', display: 'Contacts' },
@@ -20,11 +22,14 @@ export class DynamicsSearchComponent {
     constructor(private searchService: DynamicsSearchService) { }
 
     onSubmit() {
-        this.searching = true;
+        this.searching = this.searched = true;
         this.searchService.search(this.model)
             .then(results => {
                 this.entities = results;
                 this.searching = false;
+                this.searchSuccessful = results !== null && results.length > 0;
+                console.log('searching: ' + this.searchSuccessful);
+                console.log('successful: ' + this.searchSuccessful);
             });
     }
 
