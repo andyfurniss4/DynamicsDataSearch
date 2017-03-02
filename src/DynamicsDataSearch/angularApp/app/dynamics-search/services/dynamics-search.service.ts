@@ -17,7 +17,7 @@ export class DynamicsSearchService {
     constructor(private http: Http) { }
 
     search(search: DynamicsSearch): Promise<any[]> {
-        search.fields = search.fields || this.getDefaultFields(search.entity);
+        search.fields = this.getDefaultFields(search.entity);
         return this.http
             .post(this.apiUrl, JSON.stringify(search), { headers: this.headers })
             .toPromise()
