@@ -57,8 +57,7 @@ namespace DynamicsDataSearch
 
             var angularRoutes = new[] {
                  "/home",
-                 "/about",
-                 "/dynamicssearch"
+                 "/dynamics-search"
              };
 
             app.Use(async (context, next) =>
