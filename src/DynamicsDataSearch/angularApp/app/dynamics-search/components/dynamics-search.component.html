@@ -23,11 +23,11 @@
                    #filter="ngModel" />
         </div>
 
-        <div class="alert alert-danger" [hidden]="searchForm.form.valid && formValid()">Please specify a valid ID (guid) or filter</div>
+        <div class="alert alert-danger" *ngIf="!searchForm.form.valid || !formValid()">Please specify a valid ID (guid) or filter</div>
 
         <button type="submit" class="btn btn-success" *ngIf="!searching" [disabled]="searching || !searchForm.form.valid || !formValid()">Search...</button>
 
-        <div class="loader" [hidden]="!searching"></div>
+        <div class="loader" *ngIf="searching"></div>
         <div class="alert alert-danger margin-top" *ngIf="searched && !searching && !searchSuccessful">Search did not return any results</div>
     </form>
 
