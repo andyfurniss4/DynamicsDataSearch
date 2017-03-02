@@ -32,6 +32,6 @@
     </form>
 
     <div class="row padded-top padded-bottom col-lg-12" *ngIf="entities">
-        <generic-table [records]="entities" [title]="'Result'" [excludeColumns]="['@odata.etag']" [resultsPerPage]="10"></generic-table>
+        <generic-table [records]="entities" [title]="'Result'" [excludeColumns]="['@odata.etag']" [resultsPerPage]="10" [padEmptyRows]="true"></generic-table>
     </div>
 </div>

@@ -9,6 +9,7 @@ export class GenericTableComponent implements OnChanges {
     @Input() title: string;
     @Input() excludeColumns: string[];
     @Input() resultsPerPage: number = 10;
+    @Input() padEmptyRows: boolean = false;
 
     keys: string[];
     currentPage: number = 1;
@@ -34,5 +35,22 @@ export class GenericTableComponent implements OnChanges {
 
     lastPage(): number {
         return Math.ceil(this.records.length / this.resultsPerPage);
+    }
+
+    currentRangeMin(): number {
+        return ((this.currentPage - 1) * this.resultsPerPage) + 1;
+    }
+
+    currentRangeMax(): number {
+        return (this.currentPage * this.resultsPerPage) > this.records.length ? this.records.length : (this.currentPage * this.resultsPerPage);
+    }
+
+    rowsToPad(): number {
+        let rowsToPad: number = 0;
+        if (this.currentRangeMax() === this.records.length) {
+            rowsToPad = (Math.ceil(this.currentRangeMax() / 10) * 10) - this.currentRangeMax();
+            console.log(rowsToPad);
+        }
+        return rowsToPad;
     }
 }

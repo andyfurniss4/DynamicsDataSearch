@@ -5,6 +5,8 @@ import { CommonModule } from '@angular/common';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { GenericTableComponent } from './components/generic-table/generic-table.component';
 
+import { ArrayIndexPipe } from './pipes/array-index.pipe';
+
 @NgModule({
     imports: [
         CommonModule,
@@ -13,12 +15,14 @@ import { GenericTableComponent } from './components/generic-table/generic-table.
 
     declarations: [
         NavigationComponent,
-        GenericTableComponent
+        GenericTableComponent,
+        ArrayIndexPipe
     ],
 
     exports: [
         NavigationComponent,
-        GenericTableComponent
+        GenericTableComponent,
+        ArrayIndexPipe
     ]
 })
 
