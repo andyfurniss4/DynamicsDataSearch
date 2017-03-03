@@ -2,7 +2,7 @@
 Simple Angular2 app that connects to Dynamics OData API and allows you to search for data
 
 Dependencies (for running in VS2015):
-- Latest version of Node.js (https://nodejs.org/en/)
+- Latest version of Node.js and npm (comes with node.js) (https://nodejs.org/en/)
 - .NET Core 1.1 and Visual Studio Tools from https://www.microsoft.com/net/download/core#/current
 - Typescript (https://www.typescriptlang.org/)
 - Visual Studio Typescript tooling (https://www.microsoft.com/en-us/download/details.aspx?id=48593)
