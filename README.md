@@ -1,7 +1,7 @@
 # Dynamics Data Search
 Simple Angular2 app that connects to Dynamics OData API and allows you to search for data
 
-## Dependencies (for running in VS2015):
+## Dependencies (for running in VS2015)
 - Latest version of node.js and npm (comes with node.js) - https://nodejs.org/en/
 - .NET Core 1.1 and Visual Studio Tools from - https://www.microsoft.com/net/download/core#/current
 - Typescript - https://www.typescriptlang.org/
@@ -9,7 +9,7 @@ Simple Angular2 app that connects to Dynamics OData API and allows you to search
 - WebPack Task Runner - https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebPackTaskRunner
 - NPM Task Runner - https://marketplace.visualstudio.com/items?itemName=MadsKristensen.NPMTaskRunner
 
-## Setup:
+## Setup
 - Run 'npm install' in folder with package.json
 - Create a real appsettings.json file with your Dynamics configuration settings
 
@@ -22,7 +22,7 @@ Simple Angular2 app that connects to Dynamics OData API and allows you to search
 - Entity detail page. Search return either one entity and redirects automatically to detail page, or a list and displays them in a table which can then each be clicked to navigate to the detail page.
 - Move Dynamics config out of appsettings.json. Maybe use User Secrets (https://codeopinion.com/sensitive-configuration-data-asp-net-core/)
 
-## References:
+## References
 - Angular - https://angular.io/
 - Webpack - https://webpack.github.io/
 - OData filter reference - http://www.odata.org/documentation/odata-version-2-0/uri-conventions/#FilterSystemQueryOption
