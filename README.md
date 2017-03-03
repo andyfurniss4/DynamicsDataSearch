@@ -11,3 +11,7 @@ Requirements (for VS2015):
 Setup:
 - Run 'npm install' in folder with package.json
 - Create a real appsettings.json file with your Dynamics configuration settings
+
+
+References:
+- Angular lifecycle hooks (https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html)
