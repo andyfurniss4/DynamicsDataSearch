@@ -10,7 +10,7 @@ import { DynamicsSearch } from '../models/dynamics-search';
 export class DynamicsSearchComponent {
     private searching: boolean = false;
     private searched: boolean = false;
-    private searchSuccessful: boolean = false;;
+    private searchSuccessful: boolean = false;
 
     entityOptions = [
         { value: 'contacts', display: 'Contacts' },
