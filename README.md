@@ -20,6 +20,7 @@ Simple Angular2 app that connects to Dynamics OData API and allows you to search
 - Retrieve list of entities from odata metadata and allow users to search for any of these
 - Retrieve entity fields automatically
 - Entity detail page. Search return either one entity and redirects automatically to detail page, or a list and displays them in a table which can then each be clicked to navigate to the detail page.
+- Move Dynamics config out of appsettings.json. Maybe use User Secrets (https://codeopinion.com/sensitive-configuration-data-asp-net-core/)
 
 ## References:
 - Angular lifecycle hooks (https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html)
