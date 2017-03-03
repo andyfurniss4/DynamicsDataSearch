@@ -31,7 +31,7 @@
     </form>
 
     <div class="row padded-top padded-bottom col-lg-12">
-        <div class="loader" *ngIf="searching"><span></span></div>
+        <div class="padded-top" *ngIf="searching"><div class="loader"></div></div>
         <generic-table *ngIf="!searching" 
                        [records]="entities" 
                        [title]="'Result'"
