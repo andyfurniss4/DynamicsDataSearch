@@ -23,7 +23,7 @@ namespace DynamicsDataSearch.Services
         public string GetJsonById(DynamicsSearch searchParams)
         {
             var request = new HttpRequest(this.Config);
-            var response = request.DoRequest($"{this.Config.ApiUrl}{searchParams.entity}({searchParams.id})", null, "application/json", "GET");
+            var response = request.DoRequest($"{this.Config.ApiUrl}{searchParams.entity}({searchParams.id})?$select={searchParams.fields}", null, "application/json", "GET");
 
             if (response.Successful)
             {
@@ -36,7 +36,7 @@ namespace DynamicsDataSearch.Services
         public TEntity GetById<TEntity>(DynamicsSearch searchParams)
         {
             var request = new HttpRequest(this.Config);
-            var response = request.DoRequest($"{this.Config.ApiUrl}{searchParams.entity}({searchParams.id})", null, "application/json", "GET");
+            var response = request.DoRequest($"{this.Config.ApiUrl}{searchParams.entity}({searchParams.id})?$select={searchParams.fields}", null, "application/json", "GET");
 
             if (response.Successful)
             {

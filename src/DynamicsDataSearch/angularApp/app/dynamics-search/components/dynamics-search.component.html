@@ -35,7 +35,7 @@
         <generic-table *ngIf="!searching" 
                        [records]="entities" 
                        [title]="'Result'"
-                       [excludeColumns]="['@odata.etag']" 
+                       [excludeColumns]="['@odata.etag', '@odata.context']" 
                        [resultsPerPage]="10" 
                        [padEmptyRows]="true">
         </generic-table>
