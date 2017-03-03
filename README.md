@@ -2,7 +2,7 @@
 Simple Angular2 app that connects to Dynamics OData API and allows you to search for data
 
 ## Dependencies (for running in VS2015):
-- Latest version of Node.js and npm (comes with node.js) - https://nodejs.org/en/
+- Latest version of node.js and npm (comes with node.js) - https://nodejs.org/en/
 - .NET Core 1.1 and Visual Studio Tools from - https://www.microsoft.com/net/download/core#/current
 - Typescript - https://www.typescriptlang.org/
 - Visual Studio Typescript tooling - https://www.microsoft.com/en-us/download/details.aspx?id=48593
@@ -23,4 +23,7 @@ Simple Angular2 app that connects to Dynamics OData API and allows you to search
 - Move Dynamics config out of appsettings.json. Maybe use User Secrets (https://codeopinion.com/sensitive-configuration-data-asp-net-core/)
 
 ## References:
-- Angular lifecycle hooks (https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html)
+- Angular - https://angular.io/
+- Webpack - https://webpack.github.io/
+- OData filter reference - http://www.odata.org/documentation/odata-version-2-0/uri-conventions/#FilterSystemQueryOption
+- Angular lifecycle hooks - https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html
