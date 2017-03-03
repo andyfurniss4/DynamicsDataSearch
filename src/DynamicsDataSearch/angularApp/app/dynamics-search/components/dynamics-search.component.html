@@ -27,11 +27,17 @@
 
         <button type="submit" class="btn btn-success" *ngIf="!searching" [disabled]="searching || !searchForm.form.valid || !formValid()">Search...</button>
 
-        <div class="loader" *ngIf="searching"></div>
         <div class="alert alert-danger margin-top" *ngIf="searched && !searching && !searchSuccessful">Search did not return any results</div>
     </form>
 
-    <div class="row padded-top padded-bottom col-lg-12" *ngIf="entities">
-        <generic-table [records]="entities" [title]="'Result'" [excludeColumns]="['@odata.etag']" [resultsPerPage]="10" [padEmptyRows]="true"></generic-table>
+    <div class="row padded-top padded-bottom col-lg-12">
+        <div class="loader" *ngIf="searching"><span></span></div>
+        <generic-table *ngIf="!searching" 
+                       [records]="entities" 
+                       [title]="'Result'"
+                       [excludeColumns]="['@odata.etag']" 
+                       [resultsPerPage]="10" 
+                       [padEmptyRows]="true">
+        </generic-table>
     </div>
 </div>

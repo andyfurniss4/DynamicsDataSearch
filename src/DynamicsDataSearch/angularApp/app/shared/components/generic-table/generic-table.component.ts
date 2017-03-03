@@ -15,13 +15,15 @@ export class GenericTableComponent implements OnChanges {
     currentPage: number = 1;
 
     ngOnChanges() {
-        this.keys = Object.keys(this.records[0]);
+        if (this.records) {
+            this.keys = Object.keys(this.records[0]);
 
-        if (this.excludeColumns.length > 0) {
-            for (let i in this.excludeColumns) {
-                let index = this.keys.indexOf(this.excludeColumns[i]);
-                if (index > -1) {
-                    this.keys.splice(index, 1);
+            if (this.excludeColumns.length > 0) {
+                for (let i in this.excludeColumns) {
+                    let index = this.keys.indexOf(this.excludeColumns[i]);
+                    if (index > -1) {
+                        this.keys.splice(index, 1);
+                    }
                 }
             }
         }
