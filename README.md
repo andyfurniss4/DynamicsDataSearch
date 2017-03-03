@@ -14,6 +14,7 @@ Simple Angular2 app that connects to Dynamics OData API and allows you to search
 - Create a real appsettings.json file with your Dynamics configuration settings
 
 ## Planned features/improvements
+- Display error message returned from odata if filter is invalid
 - Allow users to select which fields to return
 - Build filter dynamically with UI
 - Functionality to count entities (either all or based on filter)
