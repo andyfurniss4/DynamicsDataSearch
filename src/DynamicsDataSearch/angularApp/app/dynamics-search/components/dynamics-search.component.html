@@ -25,7 +25,7 @@
 
         <div class="alert alert-danger" *ngIf="!searchForm.form.valid || !formValid()">Please specify a valid ID (guid) or filter</div>
 
-        <button type="submit" class="btn btn-success" *ngIf="!searching" [disabled]="searching || !searchForm.form.valid || !formValid()">Search...</button>
+        <button type="submit" class="btn btn-success" *ngIf="!searching" [disabled]="buttonDisabled(searchForm.form.valid)">Search...</button>
 
         <div class="alert alert-danger margin-top" *ngIf="searched && !searching && !searchSuccessful">Search did not return any results</div>
     </form>

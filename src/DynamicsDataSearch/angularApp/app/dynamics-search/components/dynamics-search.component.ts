@@ -37,4 +37,8 @@ export class DynamicsSearchComponent {
 
         return (idField.value && idField.value.length > 0) || (filterField.value && filterField.value.length > 0);
     }
+
+    buttonDisabled(formElementValid: boolean): boolean {
+        return this.searching || !formElementValid || !this.formValid();
+    }
 }
